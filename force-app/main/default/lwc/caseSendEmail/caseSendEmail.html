@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Email to Others">
+        <!--<lightning-input  label="From" name="From" value={txtFrom} onchange={handlechange}></lightning-input>-->
+        <lightning-input label="Email" name="email" placeholder="enter@email.com" onchange={changehandler}></lightning-input>
+        <lightning-input label="Subject" name="subject"  placeholder="Subject" onchange={changehandler}></lightning-input>
+        <lightning-input-rich-text label="Mail Body" name="mailbody"  onchange={changehandler}></lightning-input-rich-text>
+        <lightning-button label="Send" name="Send" onclick={savehandler}></lightning-button>
+        <lightning-button label="Cancel" name="Cancel" onclick={cancelhandler}></lightning-button>
+    </lightning-card>
+</template>

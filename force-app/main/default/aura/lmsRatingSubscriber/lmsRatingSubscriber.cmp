@@ -1,0 +1,18 @@
+<aura:component  controller="AccountController" implements="flexiPage:availableForAllPageTypes" access="global">
+    <aura:attribute name="messageReceived" Type="String"></aura:attribute>
+    <aura:attribute name="acc" Type="Account"></aura:attribute>
+    <aura:attribute name="AccountList" type="List" access="global" />
+<aura:handler name="init" value="{!this}" action="{!c.ratingList}"/>
+<aura:handler event="force:refreshView" action="{!c.ratingList}" />
+    <lightning:messageChannel
+    type="SimpleChannel__c"
+    scope="APPLICATION"
+    onMessage="{!c.handleMessage}"
+    aura:id="SimpleChannel" >
+    
+    </lightning:messageChannel>
+
+    <lightning:card title="LMS Aura Subscriber">
+        <lightning:datatable ></lightning:datatable>
+    </lightning:card>
+</aura:component>	

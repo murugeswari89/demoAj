@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="Dynamic TODO-List">
+        <lightning-layout vertical-align="center" >
+            <lightning-layout-item padding="around-small" size="12">
+                <ul class="slds-has-dividers_around-space">
+                    <template for:each={Todos} for:item="todo">
+                        <li class="slds-item" key={todo.id}>
+                            <lightning-layout vertical-align="center" horizontal-align="spread">
+                                <lightning-layout-item padding="horizontal-small">
+                                    {todo.task}
+                                </lightning-layout-item>
+                        <lightning-button-icon name={todo.id} icon-name="utility:error" alternative-text="delete" title="delete" onclick={removelist}></lightning-button-icon>
+                            </lightning-layout>
+                    </li>
+                    </template>
+                </ul>
+            </lightning-layout-item>
+        </lightning-layout>
+        <footer class="slds-card__footer">
+            <lightning-layout pull-to-boundary="small">
+                <lightning-layout-item  padding="horizontal-medium" flexibility="grow">
+                    <lightning-input placeholder="Enter Task" type="text" value={newTask} onchange={addnewTask}  variant="label-hidden" label="New Task" ></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item padding="horizontal-medium" >
+                    <lightning-button variant="brand" label="Add" onclick={addlist}></lightning-button>
+                </lightning-layout-item>
+            </lightning-layout>
+          </footer>
+          
+           
+    </lightning-card>
+</template>

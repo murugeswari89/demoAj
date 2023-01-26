@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Contact Related Receipt Record ">
+        <div class="slds-var-m-around_medium">
+            <template if:true={recList}>
+            <template for:each={recList}  for:item="receipt">
+                <div class="slds-box slds-var-m-around_medium" key={receipt.Id}>
+                        <p>{receipt.Id}</p>
+                        <p>{receipt.Amount__c}</p>
+                            <p>{receipt.Amount_Paid_Date__c}</p>
+                            <p>{receipt.Mode_of_Pay__c}</p>
+                
+                </div>
+                </template>
+                </template>
+        </div>
+    </lightning-card>
+</template>

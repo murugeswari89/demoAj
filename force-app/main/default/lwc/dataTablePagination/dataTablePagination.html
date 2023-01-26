@@ -1,0 +1,23 @@
+<template>
+   <lightning-card title="Dynamic pagination ">
+    <div class="slds-m-var-aroun_medium">
+        <lightning-datatable 
+        key-field="Id"
+        columns={columns}
+        data={conList}></lightning-datatable>
+    </div>
+    <footer>
+        <lightning-layout>
+            <div class="slds-grid slds-gutters">
+            <lightning-layout-item>
+                <lightning-button  class="slds-col slds-float_right " label="Previous"  variant="brand" onclick={btnclick} name="Previous">
+                </lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item>
+                <lightning-button class="slds-col slds-float_right" label="Next"  variant="brand" onclick={btnclick} name="Next"></lightning-button>
+            </lightning-layout-item>
+            </div>
+        </lightning-layout>
+    </footer>
+   </lightning-card> 
+</template>

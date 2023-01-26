@@ -1,0 +1,22 @@
+<template>
+    
+<p>Welcometo RecordType</p>
+<template if:true={recordTypeList}>
+<lightning-combobox
+            name="RecordType"
+            label="Select Record Type"
+            value={value}
+            options={recordTypeList}
+            onchange={RecordTypeChange} ></lightning-combobox>
+
+    <p>Selected value is: {value}</p>
+</template>
+<template if:true={industryOptions}>
+<lightning-combobox
+            name="Industry"
+            label="picklist values"
+            options={industryOptions}
+             ></lightning-combobox>
+
+    </template>
+</template>

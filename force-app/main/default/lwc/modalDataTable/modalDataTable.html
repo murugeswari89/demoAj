@@ -1,0 +1,23 @@
+<template>
+    <template if:true={showmodal}>
+        <section role="dialog" tabindex="-1" aria-labelledby="Modal-heading-01" aria-modal="true"
+            aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container ">
+                <header class="slds-modal__header">
+                    <h2 class="'slds-text-heading_medium slds-hyphenate">
+                        Account Details
+                    </h2>
+                    <div class="slds-box">
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <lightning-record-form object-api-name="Account" record-id={accrec} 
+                         layout-type="Compact"
+                            mode="readonly" columns="2"></lightning-record-form>
+                    </div>
+                    <lightning-button label="Cancel" name="close" onclick={handleModal}></lightning-button>
+                </div>
+                </header>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>       
+    </template>
+</template>

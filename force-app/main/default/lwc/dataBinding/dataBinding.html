@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Data Binding" >
+        <div class={frontStyle}></div>
+        {Persons.Name}</br>
+        {Persons.Address.City}</br>
+        {Persons.Address.County}
+        <lightning-input label="Enter First Name" value={firstName} name="txtFirstName" onchange={changeHandler} ></lightning-input>
+        First Name: {firstName}
+    </lightning-card>
+</template>

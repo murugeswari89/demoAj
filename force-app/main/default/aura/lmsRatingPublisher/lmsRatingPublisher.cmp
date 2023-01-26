@@ -1,0 +1,21 @@
+<aura:component  implements="flexiPage:availableForAllPageTypes" access="global" >
+    <aura:attribute name="messageToPublish" Type="String"></aura:attribute>
+    <lightning:messageChannel
+    type="SimpleChannel__c"
+    scope="APPLICATION"
+    aura:id="SimpleChannel" >
+    </lightning:messageChannel>
+    <lightning:card title="Account Rating Search">
+        <div class="slds-p-around_medium">
+            <lightning:input 
+            Type="Text"
+            aura:id="txtMessage"
+            onchange="{!c.handleChange}">
+        
+            </lightning:input>
+            <lightning:Button variant="Brand" label=" Publish Message " onclick="{!c.publishMessage}"></lightning:Button>
+        </div>
+        
+    </lightning:card>
+    
+</aura:component>	

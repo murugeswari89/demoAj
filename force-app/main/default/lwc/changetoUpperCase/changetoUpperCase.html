@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Changed to UpperCase">
+        Enter variable :{variable}
+       <!-- <lightning-input name="txtName"  value={variable} onchange={changeHandler}></lightning-input>-->
+        <lightning-input name="txtSalary" value={empSalary} onchange={changeHandler}></lightning-input>
+        <lightning-button label="Submit" name="click" onclick={clickHandler}></lightning-button>
+        
+        <template for:each={sal} for:item="s">
+            <div key={s.Name}>
+                {s.Name}<br/>
+                {s.Salary}<br/>
+                {s.Position}<br/>
+            </div>
+        
+        </template>
+    </lightning-card>
+</template>

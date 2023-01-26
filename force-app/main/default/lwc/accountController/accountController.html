@@ -1,0 +1,29 @@
+<template>
+   <lightning-card title="Controller API">
+    <template if:true={warmOptions}>
+        <lightning-combobox
+                    name="Rating"
+                    label="Select Rating"
+                    value={value}
+                    options={warmOptions}
+                    onchange={changerating} ></lightning-combobox>
+        
+            <p>Selected value is: {value}</p>
+        </template>
+        <div class="slds-var-m-around_medium ">
+            <template if:true={accountList}>
+                <template for:each={accountList} for:item="account">
+                    <div class="slds-box slds-var-m-around_medium" key={account.Id}>
+                        <p>{account.Name}</p>
+                            <p>{account.Industry}</p>
+                            <p>{account.Rating}</p>
+                    </div>
+                </template>
+            </template>
+            <template if:true={error}>
+                <p>Error Retrive in this page</p>
+            </template>
+        </div>
+   
+    </lightning-card>
+</template>

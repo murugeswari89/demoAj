@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Simple Calculator">
+        <div class="slds-p-around_small">
+        <lightning-input label="Input#1"  name="txtFirstNumber"  onchange={changeEvent} required  ></lightning-input>
+        <lightning-input label="Input#2"  name="txtSecondNumber"  onchange={changeEvent} required ></lightning-input><br/>
+        </div>
+        <div>
+      <span><lightning-button name="btn1"  variant="Brand" label="Add"  onclick={buttonHandler}></lightning-button></span>
+       <span> <lightning-button name="btn2" class={myStyle} variant="Brand" label="SUB" onclick={buttonHandler}></lightning-button></span>
+        <lightning-button name="btn3" class={myStyle} variant="Brand" label="MUL" onclick={buttonHandler}></lightning-button>
+        <lightning-button name="btn4" class={myStyle} variant="Brand" label="DIV"  onclick={buttonHandler}></lightning-button></div>
+        Answer:{answer}
+        
+    </lightning-card>
+</template>

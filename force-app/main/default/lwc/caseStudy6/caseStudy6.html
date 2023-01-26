@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Search Account">
+        <div class="slds-var-m-around_medium">
+        <lightning-input label="Enter AccountName" name={AccountName} onchange={changehandler}></lightning-input>
+        <lightning-button label="Search" variant="Brand" onclick={eventclick}></lightning-button>
+        </div>
+        <div class="slda-var-m-around_medium">
+        <template if:true={accList}>
+            <template for:each={accList}  for:item="account">
+            <div class="slds-box slds-var-m-around_medium" key={account.Id}>
+                    <p>{account.Id}</p>
+                    <p>{account.Name}</p>
+                        <p>{account.AccountNumber}</p>
+                        <template if:true={account.BillingAddress}>
+                            <p>{account.BillingAddress.state}</p>
+                        </template>
+                        
+            
+            </div>
+            </template>
+        </template>
+        <template if:true={err}>
+            <p> Error in Retrive in properties</p>
+        </template>
+        </div>
+    </lightning-card>
+</template>

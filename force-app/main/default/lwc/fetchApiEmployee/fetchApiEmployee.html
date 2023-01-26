@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="Employee API">
+
+        <footer>
+            <lightning-layout>
+                <lightning-layout-item>
+                    <lightning-button label="Previous" variant="brand" onlcick={btnclick} name="Previous">
+                    </lightning-button>
+                </lightning-layout-item>
+                <lightning-layout-item>
+                    <lightning-button label="Next" variant="brand" onclick={btnclick} name="Next"></lightning-button>
+                </lightning-layout-item>
+            </lightning-layout>
+        </footer>
+        
+            <template if:true={refresh}>
+                {data.name}
+                {data.email}
+            </template>
+        
+        <lightning-layout vertical-align="end">
+            <lightning-layout-item flexibility="grow">
+                <lightning-input type="Search" value={empname} onchange={updatefirstname} label="Enter Employee Name">
+                </lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-var-p-left_small">
+                <lightning-button label="Find" variant="Brand" onclick={handleclick}></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+
+
+    </lightning-card>
+</template>

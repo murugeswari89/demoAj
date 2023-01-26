@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Display Address details based on Account id">
+        <div class="slds-var-m-around_medium">
+            <lightning-record-edit-form object-api-name="Contact" record-id={recordId}>
+                <lightning-input-field field-name={AccountId} onchange={handlechange}></lightning-input-field>  
+            </lightning-record-edit-form>
+            <template if:true={address}>
+                <div class="slds-box">
+                    Address:<br/>
+                    Street:{address.street}<br/>
+                    City:{address.city}<br/>
+                    State:{address.state}<br/>
+                    Country:{address.country}                   
+                   
+                              </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

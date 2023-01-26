@@ -1,0 +1,26 @@
+<template>
+    <lightning-card   icon-name="standard:account" title="Datable Demo">
+        <lightning-button label="GetRows" variant="brand" onclick={handleclick}></lightning-button>
+        <div class="slds-var-m-around_medium">
+           <c-custom-column key-field="Id" data={data} columns={columnList}></c-custom-column>
+           <!-- <lightning-datatable 
+            key-field="Id"
+            data={listAccount}
+            columns={columnsList}           
+           onsave={handlesave}
+           draft-values={onsavedraftvalue}
+            ></lightning-datatable> -->
+
+           <!-- <lightning-datatable 
+            key-field="Id"
+            data={accList}
+            columns={columnsList}
+            show-row-number-column="true"
+            row-number-offset="8"
+            max-row-selection="1"
+               onrowselection={handlerow}
+               onrowaction={rowselect}
+            ></lightning-datatable>-->
+        </div>
+    </lightning-card>
+</template>

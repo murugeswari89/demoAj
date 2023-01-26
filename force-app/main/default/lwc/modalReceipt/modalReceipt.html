@@ -1,0 +1,25 @@
+<template>
+    <template if:true={showmodal}>
+        <section role="dialog" tabindex="-1" aria-labelledby="Modal-heading-01" aria-modal="true"
+            aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container ">
+                <header class="slds-modal__header">
+                    <h2 class="'slds-text-heading_medium slds-hyphenate">
+                        Receipt Details
+                    </h2>
+                    <div class="slds-box">
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <lightning-input type="date" label="Amount Paid date" name="paidDate" onchange={changehandler}></lightning-input>
+                        <lightning-input label="Mode of Pay" name="pay" onchange={changehandler}></lightning-input>
+                        <lightning-input label="Amount" name="Amount" onchange={changehandler}></lightning-input>
+                    </div>
+                    <lightning-Button label="Submit"  name="Submit" onclick={handleclick}></lightning-Button>
+                    <lightning-button label="Cancel" name="close" onclick={handleclose}></lightning-button>
+                    </div>
+                </header>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+
+    </template>
+</template>

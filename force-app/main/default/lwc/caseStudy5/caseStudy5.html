@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Create Contact Record">
+        <lightning-input  label="Contact LastName" name="LastName" onchange={changehandler}></lightning-input>
+        <lightning-input  label="Contact FirstName" name="Firstname" onchange={changehandler}></lightning-input>
+        <lightning-input label="BirthDate"   name="Birthdate"     onchange={changehandler}></lightning-input>
+        <lightning-input  label="Email"   name="Email"   onchange={changehandler}></lightning-input>
+        <lightning-input label="Department"  name="Department" onchange={changehandler}></lightning-input>
+        <lightning-button label="Create Contact" variant="Brand" onclick={clickhandler}></lightning-button>
+    </lightning-card>
+</template>

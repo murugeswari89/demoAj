@@ -1,0 +1,23 @@
+<aura:component implements="flexiPage:availableForAllPageTypes" access="global">
+    <aura:attribute name="ReceiptList" Type="SObject[]"></aura:attribute>
+    <lightning:messageChannel
+type="SimpleChannel__c"
+scope="APPLICATION"
+onMessage="{!c.handleMessage}"
+aura:id="SimpleChannel" >
+
+</lightning:messageChannel>
+<lightning:card title="Conted Related List">
+    <div class="slds-p-around_medium">
+      <aura:iteration items="{!v.ReceiptList}" var="lms">
+        <div class="slds-box">
+            ID:{!lms.Id}<br/>
+            Amount:{!lms.Amount__c}<br/>
+            PaidDate:{!lms.Amount_Paid_Date__c}<br/>
+            ModeofPay:{!lms.Mode_of_Pay__c}<br/>
+        </div>
+      </aura:iteration>
+    </div>
+    </lightning:card>
+
+</aura:component>	

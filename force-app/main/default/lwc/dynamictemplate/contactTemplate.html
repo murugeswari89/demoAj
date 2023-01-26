@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Contact Template">
+        <lightning-input type="name" label="FirstName"></lightning-input>
+        <lightning-input type="name" label="Last Name"></lightning-input>
+        <lightning-combobox
+            name="City"
+            label="City"
+            value={value}
+            placeholder="Select City.."
+            options={options}
+            onchange={handleChange} ></lightning-combobox>
+    </lightning-card>
+</template>

@@ -1,0 +1,20 @@
+<template>
+    <lightning-card>
+        <div class="slds-p-around_small">
+        <lightning-input name="txtProductname" type="number" onchange={handleChange}></lightning-input><br>
+        <lightning-button  name="btnDisplay" label="Display"  onclick={ChangeDisplay}></lightning-button>
+            </div>
+<template if:true={isstock}>
+    <template if:true={refresh}>  
+        {product.name}<br/>
+        {product.price}<br/>
+        {product.stock}
+</template>
+</template>
+<template if:false={isstock}>
+    <template if:true={refresh}>   
+   No Stock Availble
+ </template>
+</template>
+    </lightning-card>
+</template>

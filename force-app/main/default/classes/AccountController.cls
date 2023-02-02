@@ -15,6 +15,7 @@ public  class AccountController {
         ];
     }
 
+    // Tthis method is denoted to retreive the address of the customersss
     @AuraEnabled(cacheable=true)
     public static Account getAddress(String accId){
         return[
